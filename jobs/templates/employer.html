@@ -12,13 +12,15 @@
   {{ show_jobs(jobs) }}
 
   <h2>Reviews</h2>
+
   {% for review in reviews %}
 
   <div class="box">
     <article class="media">
       <div class="media-left">
-        {% for _ in range(0, review['rating']) %}
-          <span class="fa fa-star checked"></span>
+        {% for _ in range(0, review['rating']): %}
+        <span class="fa fa-star checked"></span>
+        {% endfor %}
       </div>
       <div class="media-content">
         <div class="content">
@@ -33,6 +35,7 @@
     </article>
   </div>
   {% endfor %}
+
   <div class="columns">
     <div class="column">
       <a class="button is-info is-pulled-right">Create Review</a>
